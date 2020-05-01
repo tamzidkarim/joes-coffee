@@ -9,12 +9,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-// import Header from "./header"
+import Navbar from "./global/Navbar"
 import "./bootstrap.min.css"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  return <>{children}</>
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  )
 }
 
 Layout.propTypes = {
