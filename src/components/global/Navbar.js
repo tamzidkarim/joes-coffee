@@ -1,35 +1,34 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
-// import cart from "../../images/cart.svg"
 import { FiShoppingCart } from "react-icons/fi"
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState({
     navbarOpen: false,
-    css: "collapse navbar-collapse"
+    css: "collapse navbar-collapse",
   })
   const [links, setlinks] = useState([
     {
       id: 1,
       path: "/",
-      text: "home"
+      text: "home",
     },
     {
       id: 2,
       path: "/about",
-      text: "about"
-    }
+      text: "about",
+    },
   ])
   const navbarHandler = () => {
     navbar.navbarOpen
       ? setNavbar({
           navbarOpen: false,
-          css: "collapse navbar-collapse"
+          css: "collapse navbar-collapse",
         })
       : setNavbar({
           navbarOpen: true,
-          css: "collapse navbar-collapse show"
+          css: "collapse navbar-collapse show",
         })
     // console.log(links, navbar.navbarOpen)
   }

@@ -5,7 +5,7 @@ export default function BackgroundSection({
   img,
   styleClass,
   children,
-  title
+  title,
 }) {
   return (
     <BackgroundImage className={styleClass} fluid={img}>
@@ -19,5 +19,5 @@ export default function BackgroundSection({
 
 BackgroundSection.defaultProps = {
   title: "Default Title",
-  styleClass: "default-background"
+  styleClass: "default-background",
 }

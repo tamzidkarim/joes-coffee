@@ -36,15 +36,20 @@ BackgroundImage {
   all: unset;
 }
 
-.default-background {
+.default-background,
+.about-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
+  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.8));
   background-position: center;
   background-size: cover;
   opacity: unset !important;
+}
+
+.about-background {
+  min-height: 50vh;
 }
 
 .btn-yellow {
@@ -55,4 +60,8 @@ BackgroundImage {
 .btn-yellow:hover {
   background: var(--mainYellow);
   color: var(--mainBrown);
+}
+
+.footer {
+  background: var(--mainBrown);
 }
