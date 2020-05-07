@@ -65,3 +65,7 @@ BackgroundImage {
 .footer {
   background: var(--mainBrown);
 }
+
+.menu {
+  background: var(--mainGrey);
+}

@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Background from "../components/global/Background"
-import Info from "../components/Home/info"
+import Info from "../components/Home/Info"
 
 const AboutPage = ({ data }) => {
   console.log(data)
