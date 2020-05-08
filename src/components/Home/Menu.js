@@ -9,32 +9,26 @@ export default function Menu({ items }) {
       "all",
       ...new Set(items.edges.map(edge => edge.node.category)),
     ],
+  })
+
+  const [catItems, setCatItems] = useState({
     coffeeItems: items.edges,
   })
 
   function getCategory(category) {
     return category === "all"
-      ? setMenu({
-          items: items.edges,
-          categories: [
-            "all",
-            ...new Set(items.edges.map(edge => edge.node.category)),
-          ],
+      ? setCatItems({
           coffeeItems: menu.items.filter(item => items.edges),
         })
-      : setMenu({
-          items: items.edges,
-          categories: [
-            "all",
-            ...new Set(items.edges.map(edge => edge.node.category)),
-          ],
+      : setCatItems({
           coffeeItems: menu.items.filter(
             item => item.node.category === category
           ),
         })
+    console.log(menu.items.filter(item => item.node.category === category))
   }
 
-  if (menu.items.length > 0) {
+  if (catItems.coffeeItems.length > 0) {
     // console.log(menu.categories)
     return (
       <section className="menu py-5">
@@ -60,18 +54,18 @@ export default function Menu({ items }) {
           </div>
           <div className="container">
             <div className="row">
-              {menu.coffeeItems.map(edge => {
+              {catItems.coffeeItems.map(edge => {
                 return (
                   <div
                     key={edge.node.id}
-                    className="col-10 col-md-6 my-3 d-flex mx-auto"
+                    className="col-11 col-md-6 my-3 d-flex mx-auto"
                   >
                     <Img fixed={edge.node.image.fixed} />
 
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between">
                         <h6 className="mb-0 text-yellow">{edge.node.title}</h6>
-                        <h6 className="mb-0 text-yellow">{edge.node.price}</h6>
+                        <h6 className="mb-0 text-yellow">${edge.node.price}</h6>
                       </div>
                       <p className="text-muted">
                         <small>

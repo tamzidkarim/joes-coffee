@@ -66,6 +66,7 @@ BackgroundImage {
   background: var(--mainBrown);
 }
 
-.menu {
+.menu,
+.contact {
   background: var(--mainGrey);
 }
