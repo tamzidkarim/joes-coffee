@@ -42,7 +42,7 @@ BackgroundImage {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.8));
+  background: linear-gradient(rgba(90, 54, 0, 0.5), rgba(161, 98, 2, 0.8));
   background-position: center;
   background-size: cover;
   opacity: unset !important;

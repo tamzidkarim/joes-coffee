@@ -1,13 +1,13 @@
 import React from "react"
 import Title from "../global/Title"
-
 export default function Contact() {
   return (
     <section className="contact py-5">
-      <Title title="Contact Us" />
+      <Title title="contact us" />
       <div className="row">
-        <div className="col-10 col-md-6 col-sm-8 mx-auto">
-          <form action="">
+        <div className="col-10 col-sm-8 col-md-6 mx-auto">
+          <form action="https://formspree.io/mvowagbw" method="POST">
+            {/* name */}
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -15,32 +15,40 @@ export default function Contact() {
                 className="form-control"
                 name="name"
                 id="name"
-                placeholder="John Smith"
+                placeholder="john smith"
               />
+            </div>
+            {/* name */}
+            {/* email */}
+            <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
                 type="text"
                 className="form-control"
-                email="email"
+                name="email"
                 id="email"
                 placeholder="email@email.com"
               />
+            </div>
+            {/* email */}
+            {/* description */}
+            <div className="form-group">
               <label htmlFor="description">Description</label>
               <textarea
-                type="text-area"
+                name="description"
+                id="description"
                 className="form-control"
                 rows="5"
-                description="description"
-                id="description"
-                placeholder="Description"
+                placeholder="your description here....."
               />
-              <button
-                type="submit"
-                className="btn btn-yellow btn-block text-capitalize mt-3"
-              >
-                Submit
-              </button>
             </div>
+            {/* email */}
+            <button
+              type="submit"
+              className="btn btn-yellow btn-block text-capitalize mt-5"
+            >
+              submit
+            </button>
           </form>
         </div>
       </div>

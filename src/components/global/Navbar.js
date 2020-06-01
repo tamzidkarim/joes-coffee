@@ -54,7 +54,7 @@ export default function Navbar() {
           <li className="nav-item ml-sm-5">
             {" "}
             {/* <img src={cart} alt="cart" /> */}
-            <FiShoppingCart className="cart-icon" />
+            <FiShoppingCart className="cart-icon snipcart-checkout" />
             {/* Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> */}
           </li>
         </ul>

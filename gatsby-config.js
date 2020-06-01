@@ -40,11 +40,12 @@ module.exports = {
       },
     },
     {
-			resolve: 'gatsby-plugin-snipcart',
-			options: {
-				apiKey: 'YOUR_SNIPCART_KEY'
-			}
-		}
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: process.env.YOUR_SNIPCART_KEY,
+        autopop: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
